@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-xs-6"> <!--column 1-->
       <h2>Create a pickup game:</h2>
-      <form class="form-group" action="index.html" method="post">
+      <form class="form-group" method="post">
         <div class="form-group">
           <label for="new-event-name">Event name</label>
           <input type="text" class="new-event-name">
@@ -45,17 +45,14 @@
             <option value="all-levels">All skill levels welcome</option>
           </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="public">Public event?</label>
           <select class="public">
             <option value="public">Public</option>
             <option value="private">Private</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for="number-of-players">Max number of players: </label>
-          <input type="text" class="number-of-players">
-        </div>
+        </div> -->
+
         <div class="form-group">
           <label for="recurring">Recurring?</label>
           <select class="recurring">
@@ -63,15 +60,34 @@
             <option value="recurring-no">No</option>
           </select>
         </div>
-        <label>Select Date: </label>
+        <div class="form-group">
+          <label for="host-info">Host email address: </label>
+          <input type="text" class="host-email">
+        </div>
+        <!-- <label>Select Date: </label>
           <div id="datepicker" class="input-group date"         data-date-format="mm-dd-yyyy">
               <input class="form-control" type="text" readonly />
               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div> -->
+          <div class="form-group">
+            <label for="time">Time and date: </label>
+            <input type="text" class="time-and-date">
           </div>
-
+          <div class="form-group">
+            <label for="location">Location: </label>
+            <input type="text" class="location">
+          </div>
+          <div class="form-group">
+            <label for="notes">Extra notes: </label>
+            <div class="">
+              <textarea name="notes" rows="8" cols="40"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success" name="button">Create!</button>
+        </form>
         </div>
 
-      </form>
+
       <script src="../js/map.js"></script>
       <div id="map">
       </div>
