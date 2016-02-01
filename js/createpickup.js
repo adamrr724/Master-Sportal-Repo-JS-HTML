@@ -1,8 +1,3 @@
-/***** Pickup Game List *****/
-function PickupGameList() {
-
-}
-
 /***** Pickup Game Object gets info from user input *****/
 function PickupGame(namePickupGame, sport, skill, recurring, notes, contact) {
   this.namePickupGame = namePickupGame;
@@ -41,32 +36,38 @@ GameDate.prototype.fullDate = function () {
   return "On " + this.gameDate + " at "+ this.gameTime;
 };
 
-
+/*** jQuery ***/
 $(document).ready(function() {
 
+  /*** Create a pickup game ***/
   $("form#create-pu-game").submit(function(event) {
   event.preventDefault();
 
   var name = $("input.new-event-name").val();
   var sport = $("select.sport-type").val();
-  var skill  $("select.skill-level").val();
+  var skill = $("select.skill-level").val();
   var recurring = $("select.recurring").val();
-  var notes = $("").val();
-  var contact = $("").val();
+  var notes = $("input").val();
+  var contact = $("input.host-email").val();
   var newPickup = new PickupGame (name, sport, skill, recurring, notes, contact);
 
-
-  var street = $("").val();
-  var city = $("").val();
-  var state = $("").val();
-  var zip = $("").val();
+  /**** Get location section ****/
+  var street = $("input").val();
+  var city = $("input").val();
+  var state = $("select").val();
+  var zip = $("input").val();
   var newLocation = new GameLocation (street, city, state, zip);
-  newPickup.gameLocation.push(GameLocation.fullAddress());
+  newPickup.gameLocation.push(newLocation.fullAddress());
 
-  var date = $("").val();
-  var time = $("").val();
+  /*** Get date-time ***/
+  var date = $("input").val();
+  var time = $("input").val();
   var newDate = new GameDate (date, time);
-  newPickup.date.push(GameDate.fullDate());
+  newPickup.date.push(newDate.fullDate());
 
+
+  console.log(newPickup);
   });
+
+
 });
