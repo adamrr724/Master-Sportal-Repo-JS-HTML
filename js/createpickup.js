@@ -30,6 +30,7 @@ function GameDate(gameDate, gameTime) {
   this.gameTime = gameTime;
 }
 
+/***** Returns full date *****/
 Date.prototype.fullDate = function () {
   return "On " + this.gameDate + " at "+ this.gameTime;
 };
