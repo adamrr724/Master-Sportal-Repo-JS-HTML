@@ -114,3 +114,7 @@ label {
 #datepicker > span:hover {
   cursor: pointer;
 }
+
+textarea {
+  margin-left: 2em;
+}
