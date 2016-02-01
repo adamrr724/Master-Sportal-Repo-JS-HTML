@@ -31,6 +31,35 @@ function GameDate(gameDate, gameTime) {
 }
 
 /***** Returns full date *****/
-Date.prototype.fullDate = function () {
+GameDate.prototype.fullDate = function () {
   return "On " + this.gameDate + " at "+ this.gameTime;
 };
+
+
+$(document).ready(function() {
+
+  $("form#pizza-order").submit(function(event) {
+  event.preventDefault();
+
+  var name = $("").val();
+  var sport = $("").val();
+  var recurring = $("").val();
+  var notes = $("").val();
+  var contact = $("").val();
+  var newPickup = new PickupGame (name, sport, recurring, notes, contact);
+
+
+  var street = $("").val();
+  var city = $("").val();
+  var state = $("").val();
+  var zip = $("").val();
+  var newLocation = new GameLocation (street, city, state, zip);
+  newPickup.gameLocation.push(GameLocation.fullAddress());
+
+  var date = $("").val();
+  var time = $("").val();
+  var newDate = new GameDate (date, time);
+  newPickup.date.push(GameDate.fullDate());
+
+  });
+});
