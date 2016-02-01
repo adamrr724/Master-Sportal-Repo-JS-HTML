@@ -1,7 +1,13 @@
+/***** Pickup Game List *****/
+function PickupGameList() {
+
+}
+
 /***** Pickup Game Object gets info from user input *****/
-function PickupGame(namePickupGame, sport, recurring, notes, contact) {
+function PickupGame(namePickupGame, sport, skill, recurring, notes, contact) {
   this.namePickupGame = namePickupGame;
   this.sport = sport;
+  this.skill = skill;
   this.gameLocation = [];
   this.date = [];
   this.recurring = recurring;
@@ -38,15 +44,16 @@ GameDate.prototype.fullDate = function () {
 
 $(document).ready(function() {
 
-  $("form#pizza-order").submit(function(event) {
+  $("form#create-pu-game").submit(function(event) {
   event.preventDefault();
 
-  var name = $("").val();
-  var sport = $("").val();
-  var recurring = $("").val();
+  var name = $("input.new-event-name").val();
+  var sport = $("select.sport-type").val();
+  var skill  $("select.skill-level").val();
+  var recurring = $("select.recurring").val();
   var notes = $("").val();
   var contact = $("").val();
-  var newPickup = new PickupGame (name, sport, recurring, notes, contact);
+  var newPickup = new PickupGame (name, sport, skill, recurring, notes, contact);
 
 
   var street = $("").val();
