@@ -5,7 +5,7 @@
 }
 
 .jumbotron {
-  background-image: url(img/soccer.jpg);
+  background-image: url(../img/soccer.jpg);
   margin-top: -2em;
   padding-left: 2em;
   text-align: center;
