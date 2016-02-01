@@ -96,8 +96,21 @@ opacity: 0.5;
   display: block;
 }
 
-
 .footer p {
   text-align: center;
   margin-top: 3em;
+}
+
+label {
+  margin-left: 20px;
+
+}
+
+#datepicker {
+  width:180px;
+  margin: 0 20px 20px 20px;
+}
+
+#datepicker > span:hover {
+  cursor: pointer;
 }
