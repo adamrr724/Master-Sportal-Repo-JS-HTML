@@ -11,13 +11,12 @@ var game4 = { namePickupGame: "Unidentified flying frisbees", sport: "frisbee", 
 var game5 = { namePickupGame: "Blood Sport", sport: "krav", skill: "advanced", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: true, notes: "Bring bandaids", contact: "anna@gmail.com"};
 
 var pickupGames = [game0, game1, game2, game3, game4, game5];
-var sportFilter = "running";
+var sportFilter = "soccer";
 var skillFilter = "newbie";
-var recurringFilter = false;
 var filteredGames = [];
 
 
-var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter, recurringFilter) {
+var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter) {
   for(var i = 0; i < pickupGames.length; i++) {
     var compareGame = pickupGames[i];
     if(compareGame.sport === sportFilter && compareGame.skill === skillFilter) {
@@ -28,3 +27,15 @@ var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter
     alert("nothing found");
   }
 };
+
+
+$(function() {
+  $("form#search").submit(function(event) {
+    event.preventDefault();
+
+    var sportFilter = $("select#sportFilter");
+    var skillFilter = $("select#skillFilter");
+
+
+  })
+});
