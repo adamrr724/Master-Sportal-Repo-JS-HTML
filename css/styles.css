@@ -54,7 +54,7 @@
   -moz-border-radius: 7;
   border-radius: 7px;
   font-family: Arial;
-
+  width: 175px;
   font-size: 20px;
   background: #c7d0d6;
   padding: 10px 20px 10px 20px;
@@ -66,8 +66,8 @@
 
  .myButtonL {
    color: #84ae04;
-   padding-left: 45px;
-   padding-right: 45px
+   /*padding-left: 45px;
+   padding-right: 45px*/
  }
 
 .btn:hover {
