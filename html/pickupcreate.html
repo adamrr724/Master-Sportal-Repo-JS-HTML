@@ -14,101 +14,89 @@
   <body>
     <!-- Nav -->
     <script src="../js/jsnav.js"></script>
-    <div class="container">
-  <div class="row">
-    <div class="col-xs-6"> <!--column 1-->
-      <h2>Create a pickup game:</h2>
-      <form class="form-group" method="post">
-        <div class="form-group">
-          <label for="new-event-name">Event name</label>
-          <input type="text" class="new-event-name">
-        </div>
-        <div class="form-group">
-          <label for="sport-type">Sport: </label>
-          <select class="sport-type">
-            <option value="soccer">Soccer</option>
-            <option value="baseball">Baseball</option>
-            <option value="basketball">Basketball</option>
-            <option value="frisbee">Ultimate frisbee</option>
-            <option value="badminton">Badminton</option>
-            <option value="volleyball">Volleyball</option>
-            <option value="running">Running</option>
-            <option value="krav">Krav Maga</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="skill-level">Skill Level: </label>
-          <select class="skill-level">
-            <option value="newbie">Newbie</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-            <option value="all-levels">All skill levels welcome</option>
-          </select>
-        </div>
-        <!-- <div class="form-group">
-          <label for="public">Public event?</label>
-          <select class="public">
-            <option value="public">Public</option>
-            <option value="private">Private</option>
-          </select>
-        </div> -->
 
-        <div class="form-group">
-          <label for="recurring">Recurring?</label>
-          <select class="recurring">
-            <option value="recurring-yes">Yes</option>
-            <option value="recurring-no">No</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="host-info">Host email address: </label>
-          <input type="text" class="host-email">
-        </div>
-        <!-- <label>Select Date: </label>
-          <div id="datepicker" class="input-group date"         data-date-format="mm-dd-yyyy">
-              <input class="form-control" type="text" readonly />
-              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-          </div> -->
-          <div class="form-group">
-              <label for="date">Date: </label>
-              <input type="date" name="date">
-          </div>
-          <div class="form-group">
-            <label for="time">Select a time: </label>
-            <input type="time" name="usr_time">
-          </div>
-          <!-- <div class="form-group">
-            <label for="time">Time and date: </label>
-            <input type="text" class="time-and-date">
-          </div> -->
-          <div class="form-group">
-            <label for="location">Location: </label>
-            <input type="text" class="location">
-          </div>
-          <div class="form-group">
-            <label for="notes">Extra notes: </label>
-            <div class="">
-              <textarea name="notes" rows="8" cols="40"></textarea>
+    <div class="container"> <!--container-->
+      <div class="row">
+        <div class="col-xs-6"> <!--column 1-->
+          <h2>Create a pickup game:</h2>
+          <form class="form-group" method="post">
+            <div class="form-group"> <!--event name-->
+              <label for="new-event-name">Event name</label>
+              <input type="text" class="new-event-name">
             </div>
-          </div>
-          <button type="submit" class="btn btn-success" name="button">Create!</button>
-        </form>
+            <div class="form-group"> <!--sport type-->
+              <label for="sport-type">Sport: </label>
+              <select class="sport-type">
+                <option value="soccer">Soccer</option>
+                <option value="baseball">Baseball</option>
+                <option value="basketball">Basketball</option>
+                <option value="frisbee">Ultimate frisbee</option>
+                <option value="badminton">Badminton</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="running">Running</option>
+                <option value="krav">Krav Maga</option>
+              </select>
+            </div>
+            <div class="form-group"> <!--skill level-->
+              <label for="skill-level">Skill Level: </label>
+              <select class="skill-level">
+                <option value="newbie">Newbie</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="all-levels">All skill levels welcome</option>
+              </select>
+            </div>
+            <!-- <div class="form-group">
+              <label for="public">Public event?</label>
+              <select class="public">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+              </select>
+            </div> -->
+
+            <div class="form-group"> <!--recurring-->
+              <label for="recurring">Recurring?</label>
+              <select class="recurring">
+                <option value="recurring-yes">Yes</option>
+                <option value="recurring-no">No</option>
+              </select>
+            </div>
+            <div class="form-group"> <!--host info-->
+              <label for="host-info">Host email address: </label>
+              <input type="text" class="host-email">
+            </div>
+
+            <div class="form-group"> <!--date-->
+                <label for="date">Date: </label>
+                <input type="date" name="date">
+            </div>
+            <div class="form-group"> <!--time-->
+              <label for="time">Select a time: </label>
+              <input type="time" name="usr_time">
+            </div>
+
+            <div class="form-group"> <!--location-->
+              <label for="location">Location: </label>
+              <input type="text" class="location">
+            </div>
+            <div class="form-group"> <!--notes-->
+              <label for="notes">Extra notes: </label>
+              <div class="">
+                <textarea name="notes" rows="8" cols="40"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" name="button">Create!</button>
+          </form>
+        </div> <!--end column 1-->
+        <script src="../js/map.js"></script>
+        <div id="map"> <!-- map -->
         </div>
-
-
-      <script src="../js/map.js"></script>
-      <div id="map">
-      </div>
-
-    </div> <!--end column 1-->
-
-  </div> <!--end row-->  <!-- map -->
-
-</div> <!--end container-->
-<div class="footer">
-  <p>
-    &#169; Sportal 2016
-  </p>
-
+      </div> <!--end row-->
+    </div> <!--end container-->
+    <div class="footer"> <!--footer-->
+      <p>
+        &#169; Sportal 2016
+      </p>
+    </div>
   </body>
 </html>
