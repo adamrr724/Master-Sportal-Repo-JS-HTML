@@ -15,19 +15,53 @@
     <!-- Nav -->
     <script src="../js/jsnav.js"></script>
     <div class="container">
-      <div class="row">
-        <div class="col-xs-6">
-          <form class="">
-
+      <div class="row"> <!--row-->
+        <div class="col-xs-6"> <!--column 1-->
+          <h2>Create a league: </h2>
+          <form class="form-group">
+            <div class="form-group"> <!--sport type-->
+              <label for="sport-type">Sport: </label>
+              <select class="sport-type">
+                <option value="soccer">Soccer</option>
+                <option value="baseball">Baseball</option>
+                <option value="basketball">Basketball</option>
+                <option value="frisbee">Ultimate frisbee</option>
+                <option value="badminton">Badminton</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="running">Running</option>
+                <option value="krav">Krav Maga</option>
+              </select>
+            </div>
+            <div class="form-group"> <!--skill level-->
+              <label for="skill-level">Skill Level: </label>
+              <select class="skill-level">
+                <option value="newbie">Newbie</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="all-levels">All skill levels welcome</option>
+              </select>
+            </div>
+            <div class="form-group"> <!--league homepage-->
+              <label for="new-league-homepage">Add your homepage: </label>
+              <input type="url" name="homepage">
+            </div>
+            <div class="form-group"> <!--notes-->
+              <label for="notes">Extra notes: </label>
+              <div class="">
+                <textarea name="notes" rows="8" cols="40"></textarea>
+              </div>
+            </div>
           </form>
-        </div>
-
-      </div>
-
+        </div> <!--end column 1-->
+      <div id="map">
+        <script src="../js/map.js"></script> <!-- map -->
+      </div> <!--end row-->
+    </div> <!--end container-->
+    <div class="footer"> <!--footer-->
+      <p>
+        &#169; Sportal 2016
+      </p>
     </div>
-    <!-- map -->
-    <script src="../js/map.js"></script>
-    <div id="map">
 
   </body>
 </html>
