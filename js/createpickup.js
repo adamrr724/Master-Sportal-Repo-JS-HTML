@@ -70,7 +70,7 @@ $(document).ready(function() {
 
     $("ul#pickup-games").append("<li><span class='pugs'>" + newPickup.namePickupGame + "</span></li>");
 
-    $(".pugs").click(function() {
+    $(".pugs").last().click(function() {
       $("#event-name").text(newPickup.namePickupGame);
       $("#location").text(newPickup.gameLocation);
       $("#sport").text(newPickup.sport);
