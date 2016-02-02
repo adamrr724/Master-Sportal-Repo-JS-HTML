@@ -83,7 +83,6 @@
                 <option value="private">Private</option>
               </select>
             </div> -->
-
             <div class="form-group"> <!--recurring-->
               <label for="recurring">Recurring?</label>
               <select class="recurring">
@@ -95,7 +94,6 @@
               <label for="host-info">Host email address: </label>
               <input type="text" class="host-email">
             </div>
-
             <div class="form-group"> <!--date-->
                 <label for="date">Date: </label>
                 <input class="date" type="date" name="date">
@@ -104,7 +102,6 @@
               <label for="time">Select a time: </label>
               <input class="time" type="time" name="usr_time">
             </div>
-
             <div class="form-group"> <!--notes-->
               <label for="notes">Extra notes: </label>
               <div>
@@ -114,10 +111,25 @@
             <button type="submit" class="btn myButtonP" name="button">Create!</button>
           </form>
         </div> <!--end column 1-->
+        <div class="col-xs-6"> <!--column 2-->
+          <p><span class="show-pug-details"></span></p>
+        </div> <!--end column 2-->
         <div id="map"> <!-- map -->
           <script src="../js/map.js"></script>
         </div>
+        <div class="show-pickup-details"> <!--show pickup details-->
+          <p>Event name: <span id="event-name"></span></p>
+          <p>Location: <span id="location"></span></p>
+          <p>Sport: <span id="sport"></span></p>
+          <p>Skill level: <span id="skills"></span></p>
+          <p>Age group: <span id="age"></span></p>
+        </div>
       </div> <!--end row-->
+      <div class="pickup-show"> <!--list of created pickup games-->
+        <h2>Your Pickup Games</h2>
+        <ul id="pickup-games">
+        </ul>
+      </div>
       </div> <!--end container-->
     <div class="footer"> <!--footer-->
       <p>
