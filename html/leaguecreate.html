@@ -15,7 +15,7 @@
     <script src="../js/jsnav.js"></script>
     <div class="container">
       <div class="row"> <!--row-->
-        <div class="col-xs-6"> <!--column 1-->
+        <div class="col-md-6 league-create"> <!--column 1-->
           <h2>Create a league: </h2>
           <form id="create-league-game" class="form-group">
             <div class="form-group"> <!--name-->
@@ -92,13 +92,16 @@
                 <textarea name="notes" rows="8" cols="40"></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-success" name="button">Create!</button>
+            <button type="submit" class="btn btn-medium btn-blue btn-radius" name="button">Create!</button>
           </form>
         </div> <!--end column 1-->
-      <div id="map">
-        <script src="../js/map.js"></script> <!-- map -->
-      </div> <!--end row-->
-    </div> <!--end container-->
+        <div class="col-md-6 map-holder">
+          <h3>Find your Location:</h3>
+          <div id="map">
+            <script src="../js/map.js"></script> <!-- map -->
+          </div>
+        </div> <!--end row-->
+        </div> <!--end container-->
     <div class="footer"> <!--footer-->
       <p>
         &#169; Copyright Sportal 2016
