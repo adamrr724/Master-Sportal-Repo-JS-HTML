@@ -24,8 +24,8 @@
               <label for="name">Pickup Name: </label>
               <input type="text" class="new-event-name">
             </div>
-            <div class="form-group"> <!--address-->
-              <label for="address">Address: </label>
+            <div class="form-group"> <!--street address-->
+              <label for="address">Street: </label>
               <input type="text" class="address">
             </div>
             <div class="form-group"> <!--city-->
@@ -68,6 +68,14 @@
                 <option value="all-levels">All skill levels welcome</option>
               </select>
             </div>
+            <div class="form-group"> <!--age-->
+              <label for="age">Age group: </label>
+              <select class="age">
+                <option value="kids">Kids</option>
+                <option value="adults">Adults</option>
+                <option value="all-ages">All Ages</option>
+              </select>
+            </div>
             <!-- <div class="form-group">
               <label for="public">Public event?</label>
               <select class="public">
@@ -99,11 +107,11 @@
 
             <div class="form-group"> <!--notes-->
               <label for="notes">Extra notes: </label>
-              <div class="">
-                <textarea name="notes" rows="8" cols="40"></textarea>
+              <div>
+                <textarea class="notes" name="notes" rows="8" cols="40"></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-success" name="button">Create!</button>
+            <button type="submit" class="btn myButtonP" name="button">Create!</button>
           </form>
         </div> <!--end column 1-->
         <div id="map"> <!-- map -->
