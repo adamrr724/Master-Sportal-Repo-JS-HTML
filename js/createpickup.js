@@ -42,35 +42,42 @@ $(document).ready(function() {
 
   /*** Create a pickup game ***/
   $("form#create-pu-game").submit(function(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  var name = $("input.new-event-name").val();
-  var sport = $("select.sport-type").val();
-  var skill = $("select.skill-level").val();
-  var age = $("select.age").val();
-  var recurring = $("select.recurring").val();
-  var notes = $("textarea.notes").val();
-  var contact = $("input.host-email").val();
-  console.log(notes);
-  var newPickup = new PickupGame (name, sport, skill, age, recurring, notes, contact);
+    var name = $("input.new-event-name").val();
+    var sport = $("select.sport-type").val();
+    var skill = $("select.skill-level").val();
+    var age = $("select.age").val();
+    var recurring = $("select.recurring").val();
+    var notes = $("textarea.notes").val();
+    var contact = $("input.host-email").val();
+    var newPickup = new PickupGame (name, sport, skill, age, recurring, notes, contact);
 
-  /**** Get location section ****/
-  var street = $("input.address").val();
-  var city = $("input.city").val();
-  var state = $("select.state").val();
-  var zip = $("input.zip").val();
-  var newLocation = new GameLocation (street, city, state, zip);
-  newPickup.gameLocation.push(newLocation.fullAddress());
+    /**** Get location section ****/
+    var street = $("input.address").val();
+    var city = $("input.city").val();
+    var state = $("select.state").val();
+    var zip = $("input.zip").val();
+    var newLocation = new GameLocation (street, city, state, zip);
+    newPickup.gameLocation.push(newLocation.fullAddress());
 
-  /*** Get date-time ***/
-  var date = $("input.date").val();
-  var time = $("input.time").val();
-  var newDate = new GameDate (date, time);
-  newPickup.date.push(newDate.fullDate());
+    /*** Get date-time ***/
+    var date = $("input.date").val();
+    var time = $("input.time").val();
+    var newDate = new GameDate (date, time);
+    newPickup.date.push(newDate.fullDate());
 
 
-  $(".pickup-show").append(name + sport);
-  console.log(newPickup);
+    $("ul#pickup-games").append("<li><span class='pugs'>" + newPickup.namePickupGame + "</span></li>");
+
+    $(".pugs").click(function() {
+      $("#event-name").text(newPickup.namePickupGame);
+      $("#location").text(newPickup.gameLocation);
+      $("#sport").text(newPickup.sport);
+      $("#skills").text(newPickup.skill);
+      $("#age").text(newPickup.age);
+    });
+
   });
 
 
