@@ -1,8 +1,9 @@
 /***** Pickup Game Object gets info from user input *****/
-function PickupGame(namePickupGame, sport, skill, recurring, notes, contact) {
+function PickupGame(namePickupGame, sport, skill, age, recurring, notes, contact) {
   this.namePickupGame = namePickupGame;
   this.sport = sport;
   this.skill = skill;
+  this.age = age;
   this.gameLocation = [];
   this.date = [];
   this.recurring = recurring;
@@ -46,10 +47,12 @@ $(document).ready(function() {
   var name = $("input.new-event-name").val();
   var sport = $("select.sport-type").val();
   var skill = $("select.skill-level").val();
+  var age = $("select.age").val();
   var recurring = $("select.recurring").val();
   var notes = $("textarea.notes").val();
   var contact = $("input.host-email").val();
-  var newPickup = new PickupGame (name, sport, skill, recurring, notes, contact);
+  console.log(notes);
+  var newPickup = new PickupGame (name, sport, skill, age, recurring, notes, contact);
 
   /**** Get location section ****/
   var street = $("input.address").val();
