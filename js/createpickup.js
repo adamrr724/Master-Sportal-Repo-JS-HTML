@@ -66,6 +66,7 @@ $(document).ready(function() {
   newPickup.date.push(newDate.fullDate());
 
 
+  $(".pickup-show").append(name + sport);
   console.log(newPickup);
   });
 
