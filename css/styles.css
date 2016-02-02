@@ -98,3 +98,7 @@ label {
 textarea {
   margin-left: 2em;
 }
+
+.show-pickup-details {
+  display: none;
+}
