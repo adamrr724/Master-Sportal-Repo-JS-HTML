@@ -58,6 +58,8 @@ $(document).ready(function() {
       $("#sport").text(newLeague.sport);
       $("#skills").text(newLeague.skill);
       $("#age").text(newLeague.age);
+      $("#notes").text(newLeague.notes);
+      $("#website").text(newLeague.contact);
     });
   });
 
