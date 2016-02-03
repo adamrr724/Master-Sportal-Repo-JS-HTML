@@ -77,6 +77,8 @@ $(document).ready(function() {
       $("#sport").text(newPickup.sport);
       $("#skills").text(newPickup.skill);
       $("#age").text(newPickup.age);
+      $("#recurring").text(newPickup.recurring);
+      $("#notes").text(newPickup.notes);
     });
 
   });

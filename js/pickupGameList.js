@@ -14,7 +14,9 @@ var game6 = { namePickupGame: "Billy Bob's Volleyball", sport: "Volleyball", ski
 
 var game7 = { namePickupGame: "Soccer Balls A Flying", sport: "Soccer", skill: "Newbie", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: "No", notes: "BYOB", contact: "anna@gmail.com"};
 
-var pickupGames = [game0, game1, game2, game3, game4, game5, game6, game7]; //array of objects
+var game8 = { namePickupGame: "Badminton of Death", sport: "Badminton", skill: "Newbie", gameLocation: "800 SW  6th St, Portland, OR 97213" , date: "On 2016-02-02 at 01:02", recurring: "No", notes: "Bring Feathered Balls... or birdies", contact: "anna@gmail.com"};
+
+var pickupGames = [game0, game1, game2, game3, game4, game5, game6, game7, game8]; //array of objects
 //testing
 
 /** Searches for input name **/

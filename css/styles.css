@@ -228,6 +228,7 @@ div {
 }
 
 .show-pickup-details {
+  display: none;
   border-radius: 25px;
   background-color: white;
   padding: 20px;
@@ -236,11 +237,4 @@ div {
 
 #pickup-games {
   font-size: 25px;
-}
-
-.show-league-details {
-  border-radius: 25px;
-  background-color: white;
-  padding: 20px;
-  width: 500px;
 }
