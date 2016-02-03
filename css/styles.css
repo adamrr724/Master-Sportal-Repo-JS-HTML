@@ -214,6 +214,6 @@ div {
    margin-bottom: 1em;
  }
 
-.show-pickup-details {
-  display: none;
+.resultspickup, .resultsleague {
+  background-color: grey;
 }
