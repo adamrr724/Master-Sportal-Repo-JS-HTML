@@ -193,6 +193,7 @@ a {
   background-size: cover;
   text-align: center;
 }
+
 #kick3 {
   background-color: #6FA7B5;
   text-align: center;
@@ -222,4 +223,15 @@ div {
   max-width: 100%;
   height: auto;
   width: auto;
+}
+
+.show-pickup-details {
+  border-radius: 25px;
+  background-color: white;
+  padding: 20px;
+  width: 500px;
+}
+
+#pickup-games {
+  font-size: 25px;
 }
