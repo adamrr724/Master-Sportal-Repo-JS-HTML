@@ -217,3 +217,9 @@ div {
 .show-pickup-details {
   display: none;
 }
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
