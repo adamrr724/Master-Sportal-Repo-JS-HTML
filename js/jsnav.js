@@ -10,12 +10,12 @@ document.write('<nav class="navbar navbar-default">' +
                       '<ul class="nav navbar-nav nav-pills">' +
                         '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="presentation"' + 'aria-haspopup="true" aria-expanded="false">Pickups<span ></span></a>' +
                           '<ul class="dropdown-menu">' +
-                            '<li><a href="pickups.html">Find a Pickup</a></li>' +
+                            '<li><a href="findpickups.html">Find a Pickup</a></li>' +
                             '<li><a href="pickupcreate.html">Create a Pickup</a></li>' +
                           '</ul>' +
                         '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="presentation"' + 'aria-haspopup="true" aria-expanded="false">Leagues<span></span></a>' +
                           '<ul class="dropdown-menu">' +
-                            '<li><a href="leagues.html">Find a league</a></li>' +
+                            '<li><a href="findleagues.html">Find a league</a></li>' +
                             '<li><a href="leaguecreate.html">Create a League</a></li>' +
                           '</ul>' +
                             '<li><a class="glyphs" href="#"><img src="../img/soccer.png" alt="" /></a></li>' +
