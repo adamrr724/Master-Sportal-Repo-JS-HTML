@@ -47,7 +47,6 @@ $(function() {
     var nameFilter = $("input#find-name").val();
 
     var nameMatches = compareNames(leagues, nameFilter);
-    console.log("name matches is: " + nameMatches);
 
     if(!nameMatches === false) {
        $("#leagues").append("<li class='leagues'>" + nameMatches.nameLeague + "</li>");
@@ -67,21 +66,29 @@ $(function() {
   });
 
   /** when search by filters **/
-  $("form#find-game").submit(function(event) {
+  $("form#find-league").submit(function(event) {
     event.preventDefault();
 
     var sportFilter = $("select.sport-type").val();
     var skillFilter = $("select.skill-level").val();
 
-    var filterMatches = compareGames(pickupGames, sportFilter, skillFilter);
+    var filterMatches = compareLeagues(leagues, sportFilter, skillFilter);
     console.log(filterMatches);
     if(filterMatches[0] !== undefined) {
       for(var i = 0; i < filterMatches.length; i++) {
-         $("#pickup-game-results").append("<li>" + filterMatches[i].namePickupGame + "</li>");
+         $("#leagues").append("<li class='leagues'>" + filterMatches[i].nameLeague + "</li>");
        }
     } else {
       alert("No results found");
     }
 
+    $(".leagues").last().click(function() {
+      $(".show-league-details").show();
+      $("#event-name").text(filterMatches.nameLeague);
+      $("#location").text(filterMatches.gameLocation);
+      $("#sport").text(filterMatches.sport);
+      $("#skills").text(filterMatches.skill);
+      $("#age").text(filterMatches.age);
+    });
   });
 });
