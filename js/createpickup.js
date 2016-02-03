@@ -78,7 +78,7 @@ $(document).ready(function() {
     var newDate = new GameDate (date, time);
     newPickup.date.push(newDate.fullDate());
 
-
+    $(".resultshow").show();
     $("ul#pickup-games").append("<li><span class='pugs'>" + newPickup.namePickupGame + "</span></li>");
 
     resetFields();

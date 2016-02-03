@@ -221,6 +221,7 @@ div {
   background-color: white;
   border-radius: 15px;
   padding: 20px;
+  margin-bottom: 1em;
 }
 
 .logo {
@@ -247,3 +248,14 @@ div {
   list-style-type: none;
   text-decoration: underline;
 }
+
+.searchnames {
+  margin-top: 1em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+ .resultshow {
+   display:none;
+ }

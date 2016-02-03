@@ -60,6 +60,7 @@ $(function() {
     var matches = compareNames(pickupGames, nameFilter);
 
     if(matches !== false) {
+       $(".resultshow").show();
        $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches.namePickupGame + "</h4>" +
        "<h5>Sport:</h5>" +  matches.sport +
        "<br><h5>Skill Level:</h5>" + matches.skill +
@@ -87,6 +88,7 @@ $(function() {
     console.log(matches);
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
+         $(".resultshow").show();
          $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches[i].namePickupGame + "</h4>" +
          "<h5>Sport:</h5>" +  matches[i].sport +
          "<br><h5>Skill Level:</h5>" + matches[i].skill +
