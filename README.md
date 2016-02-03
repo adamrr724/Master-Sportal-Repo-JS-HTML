@@ -1,6 +1,6 @@
 # Sportal
 
-#### A network of sports league and pickup games available to individuals in one east to use web/app platform.
+#### A network of sports league and pickup games available to individuals in one easy to use web/app platform.
 
 #### By Adam Ross Russell, Jon Sweeney, Marika Allely, and Tal Haberer
 
