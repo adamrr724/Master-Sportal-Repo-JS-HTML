@@ -37,6 +37,17 @@ GameDate.prototype.fullDate = function () {
   return "On " + this.gameDate + " at "+ this.gameTime;
 };
 
+var resetFields = function() {
+  $("input.new-event-name").val("");
+  $("input.website").val("");
+  $("textarea.notes").val("");
+  $("input.host-email").val("");
+  $("input.address").val("");
+  $("input.city").val("");
+  $("input.state").val("");
+  $("input.zip").val("");
+}
+
 /*** jQuery ***/
 $(document).ready(function() {
 
@@ -70,6 +81,8 @@ $(document).ready(function() {
 
     $("ul#pickup-games").append("<li><span class='pugs'>" + newPickup.namePickupGame + "</span></li>");
 
+    resetFields();
+    S
     $(".pugs").last().click(function() {
       $(".show-pickup-details").show();
       $("#event-name").text(newPickup.namePickupGame);
@@ -77,11 +90,7 @@ $(document).ready(function() {
       $("#sport").text(newPickup.sport);
       $("#skills").text(newPickup.skill);
       $("#age").text(newPickup.age);
-      $("#recurring").text(newPickup.recurring);
-      $("#notes").text(newPickup.notes);
     });
-
+  resetFields();
   });
-
-
 });
