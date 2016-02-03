@@ -10,8 +10,12 @@ var game4 = { namePickupGame: "Unidentified flying frisbees", sport: "Frisbee", 
 
 var game5 = { namePickupGame: "Blood Sport", sport: "Krav", skill: "Advanced", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: "No", notes: "Bring bandaids", contact: "anna@gmail.com"};
 
-var pickupGames = [game0, game1, game2, game3, game4, game5]; //array of objects
+var game6 = { namePickupGame: "Billy Bob's Volleyball", sport: "Volleyball", skill: "Intermediate", gameLocation: "500 SW  11th Ave, Portland, OR 97205" , date: "On 2016-02-02 at 01:02", recurring: "Yes", notes: "Bring Short Shorts", contact: "billybob@gmail.com"};
 
+var game7 = { namePickupGame: "Soccer Balls A Flying", sport: "Soccer", skill: "Newbie", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: "No", notes: "BYOB", contact: "anna@gmail.com"};
+
+var pickupGames = [game0, game1, game2, game3, game4, game5, game6, game7]; //array of objects
+//testing
 
 /** Searches for input name **/
 var compareNames = function(pickupGames, nameFilter) {
