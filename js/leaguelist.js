@@ -63,7 +63,9 @@ $(function() {
     } else {
       alert("No results found");
     }
+
     resetFields();
+
   });
 
   /** when search by filters **/
@@ -88,6 +90,8 @@ $(function() {
     } else {
       alert("No results found");
     }
+
     resetFields();
+
   });
 });
