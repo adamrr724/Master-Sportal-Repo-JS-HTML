@@ -13,29 +13,52 @@ var game5 = { namePickupGame: "Blood Sport", sport: "krav", skill: "advanced", g
 var pickupGames = [game0, game1, game2, game3, game4, game5];
 var sportFilter = "soccer";
 var skillFilter = "newbie";
+var nameFilter = "Blood Sport";
 var filteredGames = [];
+var compareName = null;
 
+var compareNames = function(pickupGames) {
+  for(var i = 0; i < pickupGames.length; i++) {
+    compareName = pickupGames[i];
+    if(compareName.nameLeague === nameFilter) {
+      return compareName;
+    }
+    return "No Results Found";
+  }
+}
 
 var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter) {
   for(var i = 0; i < pickupGames.length; i++) {
     var compareGame = pickupGames[i];
     if(compareGame.sport === sportFilter && compareGame.skill === skillFilter) {
-      filteredGames.push(compareGame);
+      filteredGames.push("Match");//compareGame);
     }
   }
   if(filteredGames[0] === undefined) {
     alert("nothing found");
   }
+  return filteredGames;
 };
 
 
 $(function() {
+
+  $("form#find-game-name").submit(function(event) {
+    event.preventDefault();
+
+    var findGameName = $("input#find-game-name");
+
+    var nameMatches = compareNames(nameFilter);
+
+    console.log(findGameName);
+
+  });
+
   $("form#search").submit(function(event) {
     event.preventDefault();
 
     var sportFilter = $("select#sportFilter");
     var skillFilter = $("select#skillFilter");
 
-
-  })
+  });
 });
