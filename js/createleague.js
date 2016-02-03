@@ -25,6 +25,16 @@ GameLocation.prototype.fullAddress = function () {
   return this.street + ", " + this.city + ", " + this.state + " " + this.zip;
 };
 
+var resetFields = function() {
+  $("input.new-league-name").val("");
+  $("input.website").val("");
+  $("textarea.notes").val("");
+  $("input.address").val("");
+  $("input.city").val("");
+  $("input.state").val("");
+  $("input.zip").val("");
+}
+
 /*** jQuery ***/
 $(document).ready(function() {
 
@@ -51,6 +61,8 @@ $(document).ready(function() {
     /*** Append new leagues ***/
     $("ul#leagues").append("<li><span class='new-leagues'>" + newLeague.nameLeague + "</span></li>");
 
+  resetFields();
+
     $(".new-leagues").last().click(function() {
       $(".show-pickup-details").show();
       $("#event-name").text(newLeague.nameLeague);
@@ -60,6 +72,4 @@ $(document).ready(function() {
       $("#age").text(newLeague.age);
     });
   });
-
-
 });

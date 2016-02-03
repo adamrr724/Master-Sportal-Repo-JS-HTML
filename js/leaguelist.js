@@ -37,6 +37,9 @@ var compareLeagues = function(pickupGames, sportFilter, skillFilter) {
   return filteredLeagues;
 };
 
+var resetFields = function() {
+  $("input#find-name").val("");
+}
 
 $(function() {
 
@@ -60,7 +63,7 @@ $(function() {
     } else {
       alert("No results found");
     }
-
+    resetFields();
   });
 
   /** when search by filters **/
@@ -85,5 +88,6 @@ $(function() {
     } else {
       alert("No results found");
     }
+    resetFields();
   });
 });

@@ -218,7 +218,9 @@ div {
  }
 
 .resultspickup, .resultsleague {
-  background-color: grey;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .logo {
@@ -228,19 +230,19 @@ div {
 }
 
 .show-pickup-details {
+  display: none;
   border-radius: 25px;
   background-color: white;
   padding: 20px;
   width: 500px;
+  font-size: 20px;
 }
 
-#pickup-games {
-  font-size: 25px;
+#pickup-games, #leagues {
+  font-size: 20px;
 }
 
-/*.show-league-details {
-  border-radius: 25px;
-  background-color: white;
-  padding: 20px;
-  width: 500px;
-}*/
+#leagues li, #pickup-games li {
+  list-style-type: none;
+  text-decoration: underline;
+}
