@@ -38,6 +38,12 @@ var compareGames = function(pickupGames, sportFilter, skillFilter) {
   return filteredGames;
 };
 
+  var resetFields = function() {
+    $("input#find-name").val("");
+    // $("select.sport-type").val("soccer"); //too annoying to reset
+    // $("select.skill-level").val("Newbie");
+  }
+
 
 $(function() {
 
@@ -50,12 +56,12 @@ $(function() {
     var nameMatches = compareNames(pickupGames, nameFilter);
 
     if(!nameMatches === false) {
-       $("#pickup-game-results").append("<li>" + nameMatches.namePickupGame + "</li>");
+       $("#pickup-game-results").append("<li class='pugs'>" + nameMatches.namePickupGame + "</li>");
     } else {
       alert("No results found");
     }
 
-    $("#pickup-game-results").last().click(function() {
+    $("#pickup-game-results").click(function() {
       $(".show-pickup-details").show();
       $("#event-name").text(nameMatches.namePickupGame);
       $("#location").text(nameMatches.gameLocation);
@@ -64,6 +70,7 @@ $(function() {
       $("#age").text(nameMatches.age);
     });
 
+    resetFields();
   });
 
   /** when search by filters **/
@@ -77,11 +84,21 @@ $(function() {
     console.log(filterMatches);
     if(filterMatches[0] !== undefined) {
       for(var i = 0; i < filterMatches.length; i++) {
-         $("#pickup-game-results").append("<li>" + filterMatches[i].namePickupGame + "</li>");
+         $("#pickup-game-results").append("<li class='pugs'>" + filterMatches[i].namePickupGame + "</li>");
        }
     } else {
       alert("No results found");
     }
 
+    $(".pugs").last().click(function() {
+      $(".show-pickup-details").show();
+      $("#event-name").text(filterMatches.namePickupGame);
+      $("#location").text(filterMatches.gameLocation);
+      $("#sport").text(filterMatches.sport);
+      $("#skills").text(filterMatches.skill);
+      $("#age").text(filterMatches.age);
+    });
+
+    resetFields();
   });
 });
