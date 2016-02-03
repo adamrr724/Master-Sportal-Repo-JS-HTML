@@ -1,3 +1,4 @@
+
 body {
   background-color:#d3d3d3;
 }
@@ -23,10 +24,6 @@ form select:focus {
 	border: 1px solid #bbb;
 }
 
-#logo {
-  height: 2em;
-  margin: -8px -8px -10px -10px;
-}
 
 form input {
 	width: 70%;
@@ -216,3 +213,7 @@ div {
    border-radius: 10px;
    margin-bottom: 1em;
  }
+
+.show-pickup-details {
+  display: none;
+}

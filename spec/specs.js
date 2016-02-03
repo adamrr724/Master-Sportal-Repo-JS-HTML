@@ -1,14 +1,29 @@
 describe('PickupGame Object', function() {
   it("selects the inputs from the user", function() {
-    var testPickupGame = new PickupGame ("foo", "frisbee", "Rookie", false, "testing", "email me");
+    var testPickupGame = new PickupGame ("foo", "frisbee", "Rookie","kids", false, "testing", "email me");
     expect(testPickupGame.namePickupGame).to.equal("foo");
     expect(testPickupGame.sport).to.equal("frisbee");
     expect(testPickupGame.skill).to.equal("Rookie");
+    expect(testPickupGame.age).to.equal("kids");
     expect(testPickupGame.gameLocation).to.be.a("array");
     expect(testPickupGame.date).to.be.a("array");
     expect(testPickupGame.recurring).to.equal(false);
     expect(testPickupGame.notes).to.equal("testing");
     expect(testPickupGame.contact).to.equal("email me");
+    });
+});
+
+describe('Pickup League Object', function() {
+  it("selects the inputs from the user", function() {
+    var testLeague = new PickupLeague ("foo", "frisbee", "Rookie","kids", false, "testing", "email me");
+    expect(testLeague.nameLeague).to.equal("foo");
+    expect(testLeague.sport).to.equal("frisbee");
+    expect(testLeague.skill).to.equal("Rookie");
+    expect(testLeague.age).to.equal("kids");
+    expect(testLeague.gameLocation).to.be.a("array");
+    expect(testLeague.cost).to.equal(false);
+    expect(testLeague.notes).to.equal("testing");
+    expect(testLeague.contact).to.equal("email me");
     });
 });
 

@@ -30,26 +30,35 @@ $(document).ready(function() {
 
   /*** Create a pickup game ***/
   $("form#create-league-game").submit(function(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  var name = $("input.new-league-name").val();
-  var sport = $("select.sport-type").val();
-  var skill = $("select.skill-level").val();
-  var age = $("select.age-level").val();
-  var cost = $("select.cost").val();
-  var notes = $("textarea.notes").val();
-  var contact = $("input.website").val();
-  var newLeague = new PickupLeague (name, sport, skill, age, cost, notes, contact);
+    var name = $("input.new-league-name").val();
+    var sport = $("select.sport-type").val();
+    var skill = $("select.skill-level").val();
+    var age = $("select.age-level").val();
+    var cost = $("select.cost").val();
+    var notes = $("textarea.notes").val();
+    var contact = $("input.website").val();
+    var newLeague = new PickupLeague (name, sport, skill, age, cost, notes, contact);
 
-  /**** Get location section ****/
-  var street = $("input.address").val();
-  var city = $("input.city").val();
-  var state = $("select.state").val();
-  var zip = $("input.zip").val();
-  var newLocation = new GameLocation (street, city, state, zip);
-  newLeague.gameLocation.push(newLocation.fullAddress());
+    /**** Get location section ****/
+    var street = $("input.address").val();
+    var city = $("input.city").val();
+    var state = $("select.state").val();
+    var zip = $("input.zip").val();
+    var newLocation = new GameLocation (street, city, state, zip);
+    newLeague.gameLocation.push(newLocation.fullAddress());
+    /*** Append new leagues ***/
+    $("ul#leagues").append("<li><span class='new-leagues'>" + newLeague.nameLeague + "</span></li>");
 
-  console.log(newLeague);
+    $(".new-leagues").last().click(function() {
+      $(".show-pickup-details").show();
+      $("#event-name").text(newLeague.nameLeague);
+      $("#location").text(newLeague.gameLocation);
+      $("#sport").text(newLeague.sport);
+      $("#skills").text(newLeague.skill);
+      $("#age").text(newLeague.age);
+    });
   });
 
 
