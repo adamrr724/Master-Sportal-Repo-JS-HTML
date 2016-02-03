@@ -100,6 +100,8 @@ form input:focus {
   width: 500px;
   height: 400px;
   display: block;
+  margin-bottom: 20px;
+  border-radius: 25px;
 }
 
 .footer p {
@@ -234,4 +236,11 @@ div {
 
 #pickup-games {
   font-size: 25px;
+}
+
+.show-league-details {
+  border-radius: 25px;
+  background-color: white;
+  padding: 20px;
+  width: 500px;
 }
