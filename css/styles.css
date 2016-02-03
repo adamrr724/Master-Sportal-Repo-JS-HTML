@@ -1,6 +1,6 @@
 
 body {
-  background-color: #d9d9d9;
+  background-color:#d3d3d3;
 }
 
 form select {
@@ -51,7 +51,7 @@ form input:focus {
 }
 
 .jumbotron {
-  background-color: #d9d9d9;
+  background-color: #d3d3d3;
   margin-top: -2em;
   padding-left: 2em;
   text-align: center;
@@ -163,9 +163,9 @@ a {
 
 .boxes {
   height: 12em;
-  padding-left: 5em;
-  padding-bottom: 25em;
-  padding-right: 5em;
+  padding-left: 4em;
+  padding-bottom: 30em;
+  padding-right: 4em;
   text-align: left;
   font-size: 20px;
   text-shadow: #d3d3d3 0.05em 0.1em 0.5em;
@@ -182,30 +182,38 @@ a {
 }
 
 #kick1 {
-  background-color: #7ca489;
-  background-image: url(../img/soccerball1.jpg);
-  background-size: cover;
+  background-color: #6FA7B5;
+  /*background-image: url(../img/soccerball.jpg);*/
+  /*background-size: cover;*/
+  text-align: center;
 }
+
 #kick2 {
-  background-image: url(../img/baseball11.jpg);
+  background-color: #A9BF62;
   background-size: cover;
+  text-align: center;
 }
 #kick3 {
-  background-image: url(../img/oldbasketball.jpg);
-  background-size: cover;
+  background-color: #6FA7B5;
+  text-align: center;
+  /*background-image: url(../img/oldbasketball2.jpg);*/
+  /*background-size: cover;*/
 }
 
 div {
   margin: 0;
 }
- .map-holder {
-   text-align: center;
- }
 
  script {
    text-align: center;
  }
- 
+
+ img.frontpics {
+   height: 8em;
+   border-radius: 10px;
+   margin-bottom: 1em;
+ }
+
 .show-pickup-details {
   display: none;
 }
