@@ -48,16 +48,16 @@ $(document).ready(function() {
     var zip = $("input.zip").val();
     var newLocation = new GameLocation (street, city, state, zip);
     newLeague.gameLocation.push(newLocation.fullAddress());
+    /*** Append new leagues ***/
+    $("ul#leagues").append("<li><span class='new-leagues'>" + newLeague.nameLeague + "</span></li>");
 
-    $("ul#pickup-games").append("<li><span class='pugs'>" + newPickup.namePickupGame + "</span></li>");
-
-    $(".pugs").last().click(function() {
+    $(".new-leagues").last().click(function() {
       $(".show-pickup-details").show();
-      $("#event-name").text(newPickup.namePickupGame);
-      $("#location").text(newPickup.gameLocation);
-      $("#sport").text(newPickup.sport);
-      $("#skills").text(newPickup.skill);
-      $("#age").text(newPickup.age);
+      $("#event-name").text(newLeague.nameLeague);
+      $("#location").text(newLeague.gameLocation);
+      $("#sport").text(newLeague.sport);
+      $("#skills").text(newLeague.skill);
+      $("#age").text(newLeague.age);
     });
   });
 
