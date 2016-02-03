@@ -10,55 +10,78 @@ var game4 = { namePickupGame: "Unidentified flying frisbees", sport: "frisbee", 
 
 var game5 = { namePickupGame: "Blood Sport", sport: "krav", skill: "advanced", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: true, notes: "Bring bandaids", contact: "anna@gmail.com"};
 
-var pickupGames = [game0, game1, game2, game3, game4, game5];
-var sportFilter = "soccer";
-var skillFilter = "newbie";
-var nameFilter = "Blood Sport";
-var filteredGames = [];
-var compareName = null;
+var pickupGames = [game0, game1, game2, game3, game4, game5]; //array of objects
 
-var compareNames = function(pickupGames) {
+
+/** Searches for input name **/
+var compareNames = function(pickupGames, nameFilter) {
+  var compareName = null;
   for(var i = 0; i < pickupGames.length; i++) {
     compareName = pickupGames[i];
-    if(compareName.nameLeague === nameFilter) {
+    if(compareName.namePickupGame === nameFilter) {
       return compareName;
     }
-    return "No Results Found";
   }
+  return false;
 }
 
-var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter) {
+var compareGames = function(pickupGames, sportFilter, skillFilter) {
+  var filteredGames = [];
+  var compareGame = null;
   for(var i = 0; i < pickupGames.length; i++) {
-    var compareGame = pickupGames[i];
+    compareGame = pickupGames[i];
     if(compareGame.sport === sportFilter && compareGame.skill === skillFilter) {
-      filteredGames.push("Match");//compareGame);
+      filteredGames.push(compareGame);
     }
   }
-  if(filteredGames[0] === undefined) {
-    alert("nothing found");
-  }
+//  console.log(filteredGames);
   return filteredGames;
 };
 
 
 $(function() {
 
+  /** when search by game name **/
   $("form#find-game-name").submit(function(event) {
     event.preventDefault();
 
-    var findGameName = $("input#find-game-name");
+    var nameFilter = $("input#find-name").val();
 
-    var nameMatches = compareNames(nameFilter);
+    var nameMatches = compareNames(pickupGames, nameFilter);
 
-    console.log(findGameName);
+    if(!nameMatches === false) {
+       $("#pickup-game-results").append("<li>" + nameMatches.namePickupGame + "</li>");
+    } else {
+      alert("No results found");
+    }
+
+    $("#pickup-game-results").last().click(function() {
+      $(".show-pickup-details").show();
+      $("#event-name").text(nameMatches.namePickupGame);
+      $("#location").text(nameMatches.gameLocation);
+      $("#sport").text(nameMatches.sport);
+      $("#skills").text(nameMatches.skill);
+      $("#age").text(nameMatches.age);
+    });
 
   });
 
-  $("form#search").submit(function(event) {
+  /** when search by filters **/
+  $("form#find-game").submit(function(event) {
     event.preventDefault();
 
-    var sportFilter = $("select#sportFilter");
-    var skillFilter = $("select#skillFilter");
+    var sportFilter = $("select.sport-type").val();
+    var skillFilter = $("select.skill-level").val();
+
+    var filterMatches = compareGames(pickupGames, sportFilter, skillFilter);
+    console.log(filterMatches);
+    if(filterMatches[0] !== undefined) {
+      for(var i = 0; i < filterMatches.length; i++) {
+         $("#pickup-game-results").append("<li>" + filterMatches[i].namePickupGame + "</li>");
+       }
+    } else {
+      alert("No results found");
+    }
 
   });
 });
