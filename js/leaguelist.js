@@ -52,6 +52,7 @@ $(function() {
     var matches = compareNames(leagues, nameFilter);
 
     if(!matches === false) {
+       $(".resultshow").show();
        $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches.nameLeague + "</h4>" +
        "<h5>Sport:</h5>" +  matches.sport +
        "<br><h5>Skill Level:</h5>" + matches.skill +
@@ -78,6 +79,7 @@ $(function() {
     var matches = compareLeagues(leagues, sportFilter, skillFilter);
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
+         $(".resultshow").show();
          $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches[i].nameLeague + "</h4>" +
          "<h5>Sport:</h5>" +  matches[i].sport +
          "<br><h5>Skill Level:</h5>" + matches[i].skill +

@@ -59,6 +59,7 @@ $(document).ready(function() {
     var newLocation = new GameLocation (street, city, state, zip);
     newLeague.gameLocation.push(newLocation.fullAddress());
     /*** Append new leagues ***/
+    $(".resultshow").show();
     $("ul#leagues").append("<li><span class='new-leagues'>" + newLeague.nameLeague + "</span></li>");
 
   resetFields();
