@@ -15,10 +15,11 @@ var sportFilter = "soccer";
 var skillFilter = "newbie";
 var nameFilter = "Blood Sport";
 var filteredGames = [];
+var compareName = null;
 
 var compareNames = function(pickupGames) {
   for(var i = 0; i < pickupGames.length; i++) {
-    var compareName = pickupGames[i];
+    compareName = pickupGames[i];
     if(compareName.nameLeague === nameFilter) {
       return compareName;
     }
@@ -30,7 +31,7 @@ var compareGames = function(filteredGames, pickupGames, sportFilter, skillFilter
   for(var i = 0; i < pickupGames.length; i++) {
     var compareGame = pickupGames[i];
     if(compareGame.sport === sportFilter && compareGame.skill === skillFilter) {
-      filteredGames.push(compareGame);
+      filteredGames.push("Match");//compareGame);
     }
   }
   if(filteredGames[0] === undefined) {
@@ -45,11 +46,11 @@ $(function() {
   $("form#find-game-name").submit(function(event) {
     event.preventDefault();
 
-    var nameFilter = $("select#nameFilter");
+    var findGameName = $("input#find-game-name");
 
-    //compareNames(nameFilter);
+    var nameMatches = compareNames(nameFilter);
 
-    alert("Hello");
+    console.log(findGameName);
 
   });
 
