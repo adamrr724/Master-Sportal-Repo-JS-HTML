@@ -1,12 +1,12 @@
-var league0 = { nameLeague: "Soccer League", sport: "soccer", skill: "Advanced", age: "Kids", cost:"Under $50", gameLocation: "900 SW  12th Ave, Portland, OR 97209" , date: "On 2016-02-03 at 01:02", recurring: false, notes: "Play Easy on Adam", contact: "talh@gmail.com"};
+var league0 = { nameLeague: "Soccer League", sport: "Soccer", skill: "Advanced", age: "Kids", cost:"Under $50", gameLocation: "900 SW  12th Ave, Portland, OR 97209" , notes: "Play Easy on Adam", contact: "http//:google.com"};
 
-var league1 = { nameLeague: "Flag Football League", sport: "football", skill: "All Skill Levels", age: "Kids", cost: "Under $50", gameLocation: "123 main st, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: false, notes: "Flags are provided", contact: "adamrr@gmail.com"};
+var league1 = { nameLeague: "Flag Football League", sport: "Football", skill: "All Skill Levels", age: "Kids", cost: "Under $50", gameLocation: "123 main st, Portland, OR 97204" , notes: "Flags are provided", contact: "http//:google.com"};
 
-var league2 = { nameLeague: "Soccer Madness", sport: "soccer", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: false, notes: "Flags are provided", contact: "adamrr@gmail.com"};
+var league2 = { nameLeague: "Soccer Madness", sport: "Soccer", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" , notes: "Flags are provided", contact: "http//:google.com"};
 
-var league3 = { nameLeague: "Hoops", sport: "basketball", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: true, notes: "Play Easy on Adam", contact: "anna@gmail.com"};
+var league3 = { nameLeague: "Hoops", sport: "Basketball", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" ,  notes: "Play Easy on Adam", contact: "http//:google.com"};
 
-var league4 = { nameLeague: "Unidentified flying frisbees League", sport: "frisbee", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" , date: "On 2016-02-02 at 01:02", recurring: false, notes: "Points for hitting Adam with the disc", contact: "marika@gmail.com"};
+var league4 = { nameLeague: "Unidentified flying frisbees League", sport: "Frisbee", skill: "Newbie", age: "Kids", cost: "Under $50", gameLocation: "400 SW  6th St, Portland, OR 97204" , notes: "Points for hitting Adam with the disc", contact: "http//:google.com"};
 
 var leagues = [league0, league1, league2, league3, league4]; //array of league objs
 
@@ -46,22 +46,20 @@ $(function() {
 
     var nameFilter = $("input#find-name").val();
 
-    var nameMatches = compareNames(leagues, nameFilter);
+    var matches = compareNames(leagues, nameFilter);
 
-    if(!nameMatches === false) {
-       $("#leagues").append("<li class='leagues'>" + nameMatches.nameLeague + "</li>");
+    if(!matches === false) {
+       $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches.nameLeague + "</h4>" +
+       "<h5>Sport:</h5>" +  matches.sport +
+       "<br><h5>Skill Level:</h5>" + matches.skill +
+       "<br><h5>Cost:</h5>" + matches.cost +
+       "<br><h5>Location:</h5>" + matches.gameLocation +
+       "<br><h5>League Notes:</h5>" + matches.notes +
+       "<br><h5>League Website:</h5>" + matches.contact +
+       "</div>");
     } else {
       alert("No results found");
     }
-
-    $(".leagues").last().click(function() {
-      $(".show-league-details").show();
-      $("#event-name").text(nameMatches.nameLeague);
-      $("#location").text(nameMatches.gameLocation);
-      $("#sport").text(nameMatches.sport);
-      $("#skills").text(nameMatches.skill);
-      $("#age").text(nameMatches.age);
-    });
 
   });
 
@@ -72,23 +70,20 @@ $(function() {
     var sportFilter = $("select.sport-type").val();
     var skillFilter = $("select.skill-level").val();
 
-    var filterMatches = compareLeagues(leagues, sportFilter, skillFilter);
-    console.log(filterMatches);
-    if(filterMatches[0] !== undefined) {
-      for(var i = 0; i < filterMatches.length; i++) {
-         $("#leagues").append("<li class='leagues'>" + filterMatches[i].nameLeague + "</li>");
+    var matches = compareLeagues(leagues, sportFilter, skillFilter);
+    if(matches[0] !== undefined) {
+      for(var i = 0; i < matches.length; i++) {
+         $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches[i].nameLeague + "</h4>" +
+         "<h5>Sport:</h5>" +  matches[i].sport +
+         "<br><h5>Skill Level:</h5>" + matches[i].skill +
+         "<br><h5>Cost:</h5>" + matches[i].cost +
+         "<br><h5>Location:</h5>" + matches[i].gameLocation +
+         "<br><h5>League Notes:</h5>" + matches[i].notes +
+         "<br><h5>League Website:</h5>" + matches[i].contact +
+         "</div>");
        }
     } else {
       alert("No results found");
     }
-
-    $(".leagues").last().click(function() {
-      $(".show-league-details").show();
-      $("#event-name").text(filterMatches.nameLeague);
-      $("#location").text(filterMatches.gameLocation);
-      $("#sport").text(filterMatches.sport);
-      $("#skills").text(filterMatches.skill);
-      $("#age").text(filterMatches.age);
-    });
   });
 });
