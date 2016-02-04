@@ -260,3 +260,8 @@ h2 {
  .resultshow {
    display:none;
  }
+
+ /*****Toggle Details: Will hide at first*****/
+ .details {
+   display: none;
+ }

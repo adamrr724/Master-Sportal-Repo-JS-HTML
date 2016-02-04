@@ -54,19 +54,24 @@ $(function() {
     if(!matches === false) {
        $(".resultshow").show();
        $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches.nameLeague + "</h4>" +
+       "<div class='details'>" +
        "<h5>Sport:</h5>" +  matches.sport +
        "<br><h5>Skill Level:</h5>" + matches.skill +
        "<br><h5>Cost:</h5>" + matches.cost +
        "<br><h5>Location:</h5>" + matches.gameLocation +
        "<br><h5>League Notes:</h5>" + matches.notes +
        "<br><h5>League Website:</h5>" + matches.contact +
+       "</div>" +
        "</div>");
     } else {
       alert("No results found");
     }
-
+    /**reset the fields after submit**/
     resetFields();
-
+    /**Toggle details**/
+    $("h4").click(function() {
+      $(".details").toggle("slow","swing");
+    });
   });
 
   /** when search by filters **/
@@ -81,19 +86,26 @@ $(function() {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
          $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches[i].nameLeague + "</h4>" +
+         "<div class='details'>" +
          "<h5>Sport:</h5>" +  matches[i].sport +
          "<br><h5>Skill Level:</h5>" + matches[i].skill +
          "<br><h5>Cost:</h5>" + matches[i].cost +
          "<br><h5>Location:</h5>" + matches[i].gameLocation +
          "<br><h5>League Notes:</h5>" + matches[i].notes +
          "<br><h5>League Website:</h5>" + matches[i].contact +
+         "</div>" +
          "</div>");
        }
     } else {
       alert("No results found");
     }
-
+    /**reset the fields after submit**/
     resetFields();
+    /**Toggle details**/
+    $("h4").click(function() {
+      $(".details").toggle("slow","swing");
+    });
 
   });
+
 });
