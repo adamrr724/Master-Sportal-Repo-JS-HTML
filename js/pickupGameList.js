@@ -54,14 +54,15 @@ $(function() {
   /** when search by game name **/
   $("form#find-game-name").submit(function(event) {
     event.preventDefault();
-
+    /* clear the results */
+    $("#pickup-game-results").empty();
     var nameFilter = $("input#find-name").val();
 
     var matches = compareNames(pickupGames, nameFilter);
 
     if(matches !== false) {
        $(".resultshow").show();
-       $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4><span class='extra'>Pickup Game Name:  </span>" + matches.namePickupGame + "</h4>" +
+       $("#pickup-game-results").append("<hr><div class='resultspickup'>" + "<h3><span class='extra'>Pickup Game Name:  </span>" + matches.namePickupGame + "</h3>" +
        "<div class='details'>" +
        "<h5><span class='extra'>Sport: </span>" +  matches.sport + "</h5>" +
        "<br><h5><span class='extra'>Skill Level: </span>" + matches.skill + "</h5>" +
@@ -87,6 +88,9 @@ $(function() {
   $("form#find-game").submit(function(event) {
     event.preventDefault();
 
+    /* clear the results */
+    $("#pickup-game-results").empty();
+
     var sportFilter = $("select.sport-type").val();
     var skillFilter = $("select.skill-level").val();
 
@@ -95,7 +99,7 @@ $(function() {
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
-         $("#pickup-game-results").append("<div class='resultspickup'>" + "<h3><span class='extra'>Pickup Game Name:</span> " + matches[i].namePickupGame + "</h3>" +
+         $("#pickup-game-results").append("<hr><div class='resultspickup'>" + "<h3><span class='extra'>Pickup Game Name:</span> " + matches[i].namePickupGame + "</h3>" +
          "<div class='details'>" +
          "<h5><span class='extra'>Sport:</span> " +  matches[i].sport + "</h5>" +
          "<br><h5><span class='extra'>Skill Level: </span>" + matches[i].skill + "</h5>" +
