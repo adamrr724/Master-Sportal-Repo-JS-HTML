@@ -62,6 +62,7 @@ $(function() {
     if(matches !== false) {
        $(".resultshow").show();
        $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches.namePickupGame + "</h4>" +
+       "<div class='details'>" +
        "<h5>Sport:</h5>" +  matches.sport +
        "<br><h5>Skill Level:</h5>" + matches.skill +
        "<br><h5>Recurring Event?:</h5>" + matches.recurring +
@@ -69,12 +70,17 @@ $(function() {
        "<br><h5>Date:</h5>" + matches.date +
        "<br><h5>Event Notes:</h5>" + matches.notes +
        "<br><h5>Coordinator Contact Info:</h5>" + matches.contact +
+       "</div>" +
        "</div>");
     } else {
       alert("No results found");
     }
-
+    /**reset fields**/
     resetFields();
+    /**Toggle Details**/
+    $("h4").click(function() {
+      $(".details").toggle("slow","swing");
+    });
   });
 
   /** when search by filters **/
@@ -90,6 +96,7 @@ $(function() {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
          $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches[i].namePickupGame + "</h4>" +
+         "<div class='details'>" +
          "<h5>Sport:</h5>" +  matches[i].sport +
          "<br><h5>Skill Level:</h5>" + matches[i].skill +
          "<br><h5>Recurring Event?:</h5>" + matches[i].recurring +
@@ -97,12 +104,17 @@ $(function() {
          "<br><h5>Date:</h5>" + matches[i].date +
          "<br><h5>Event Notes:</h5>" + matches[i].notes +
          "<br><h5>Coordinator Contact Info:</h5>" + matches[i].contact +
+         "</div>" +
          "</div>");
        }
     } else {
       alert("No results found");
     }
-
+    /**reset fields after submit**/
     resetFields();
+    /**Toggle Details**/
+    $("h4").click(function() {
+      $(".details").toggle("slow","swing");
+    });
   });
 });
