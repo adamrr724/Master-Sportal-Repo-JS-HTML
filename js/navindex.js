@@ -30,12 +30,8 @@ document.write('<nav class="navbar navbar-default">' +
                             '<li><a class="glyphs" href="#"><img src="img/yoga.png" alt="" /></a></li>' +
                         '</li>' +
                       '</ul>' +
-                        '<ul class="nav navbar-nav nav-pills navbar-right">' +
-                          '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="presentation"' + 'aria-haspopup="true" aria-expanded="false">Find a Field<span ></span></a>' +
-                            '<ul class="dropdown-menu">' +
-                              '<li><a href="#">Find a Field</a></li>' +
-                              '<li><a href="#">Create a Court</a></li>' +
-                            '</ul>' +
+                      '<ul class="nav navbar-nav nav-pills navbar-right">' +
+                        '<li><a href="html/findafield.html" role="presentation"' + 'aria-haspopup="true" aria-expanded="false">Find a Field</a>' +
                           // '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"' + 'aria-haspopup="true" aria-expanded="false">About Us <span></span></a>' +
                           //   '<ul class="dropdown-menu">' +
                           //     '<li><a href="aboutus.html">About Us</a></li>' +

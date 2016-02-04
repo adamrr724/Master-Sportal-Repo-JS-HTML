@@ -103,6 +103,14 @@ form input:focus {
   margin-bottom: 20px;
 }
 
+#map2 {
+  width: 1000px;
+  height: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer p {
   text-align: center;
   margin-top: 3em;
@@ -257,4 +265,8 @@ h2 {
 }
  .resultshow {
    display:none;
+ }
+
+ .fields {
+   text-align: center;
  }
