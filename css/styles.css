@@ -51,7 +51,9 @@ form input:focus {
 }
 
 .jumbotron {
-  background-color: #d3d3d3;
+  background-image: url(http://emdrtreinamento.com.br/wp-content/uploads/bg.jpg);
+  background-size: cover;
+  /*background-color: #d3d3d3;*/
   margin-top: -2em;
   padding-left: 2em;
   text-align: center;
