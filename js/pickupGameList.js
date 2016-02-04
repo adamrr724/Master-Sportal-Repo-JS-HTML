@@ -61,7 +61,7 @@ $(function() {
 
     if(matches !== false) {
        $(".resultshow").show();
-       $("#pickup-game-results").append("<hr><div class='resultspickup'>" + "<h4><span class='extra'>Pickup Game Name:  </span>" + matches.namePickupGame + "</h4>" +
+       $("#pickup-game-results").append("<hr><div class='resultspickup'>" + "<h3><span class='extra'>Pickup Game Name:  </span>" + matches.namePickupGame + "</h3>" +
        "<div class='details'>" +
        "<h5><span class='extra'>Sport: </span>" +  matches.sport + "</h5>" +
        "<br><h5><span class='extra'>Skill Level: </span>" + matches.skill + "</h5>" +

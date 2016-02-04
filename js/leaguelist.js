@@ -77,7 +77,8 @@ $(function() {
   /** when search by filters **/
   $("form#find-league").submit(function(event) {
     event.preventDefault();
-
+    /* clear the results */
+    $("#leagues").empty();
     var sportFilter = $("select.sport-type").val();
     var skillFilter = $("select.skill-level").val();
 
