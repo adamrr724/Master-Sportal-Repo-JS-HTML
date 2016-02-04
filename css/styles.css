@@ -299,9 +299,7 @@ h2 {
    text-align: center;
 
  /*****Toggle Details: Will hide at first*****/
- .details {
-   display: none;
- }
+
 
  /**Game/League Info**/
  .extra {
