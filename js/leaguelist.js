@@ -53,7 +53,7 @@ $(function() {
 
     if(!matches === false) {
        $(".resultshow").show();
-       $("#leagues").append("<div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches.nameLeague + "</h3>" +
+       $("#leagues").append("<hr><div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches.nameLeague + "</h3>" +
        "<div class='details'>" +
        "<h5><span class='extra'>Sport: </span>" +  matches.sport + "</h5>" +
        "<br><h5><span class='extra'>Skill Level: </span>" + matches.skill + "</h5>" +
@@ -85,7 +85,7 @@ $(function() {
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
-         $("#leagues").append("<div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches[i].nameLeague + "</h3>" +
+         $("#leagues").append("<hr><div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches[i].nameLeague + "</h3>" +
          "<div class='details'>" +
          "<h5><span class='extra'>Sport: </span>" +  matches[i].sport + "</h5>" +
          "<br><h5><span class='extra'>Skill Level: </span>" + matches[i].skill + "</h5>" +
