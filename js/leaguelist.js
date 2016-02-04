@@ -53,14 +53,14 @@ $(function() {
 
     if(!matches === false) {
        $(".resultshow").show();
-       $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches.nameLeague + "</h4>" +
+       $("#leagues").append("<div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches.nameLeague + "</h3>" +
        "<div class='details'>" +
-       "<h5>Sport:</h5>" +  matches.sport +
-       "<br><h5>Skill Level:</h5>" + matches.skill +
-       "<br><h5>Cost:</h5>" + matches.cost +
-       "<br><h5>Location:</h5>" + matches.gameLocation +
-       "<br><h5>League Notes:</h5>" + matches.notes +
-       "<br><h5>League Website:</h5>" + matches.contact +
+       "<h5><span class='extra'>Sport: </span>" +  matches.sport + "</h5>" +
+       "<br><h5><span class='extra'>Skill Level: </span>" + matches.skill + "</h5>" +
+       "<br><h5><span class='extra'>Cost: </span>" + matches.cost + "</h5>" +
+       "<br><h5><span class='extra'>Location: </span>" + matches.gameLocation + "</h5>" +
+       "<br><h5><span class='extra'>League Notes: </span>" + matches.notes + "</h5>" +
+       "<br><h5><span class='extra'>League Website: </span>" + matches.contact + "</h5>" +
        "</div>" +
        "</div>");
     } else {
@@ -69,8 +69,8 @@ $(function() {
     /**reset the fields after submit**/
     resetFields();
     /**Toggle details**/
-    $("h4").click(function() {
-      $(".details").toggle("slow","swing");
+    $(".resultsleague").click(function() {
+      $(this).children(".details").toggle("slow");
     });
   });
 
@@ -85,14 +85,14 @@ $(function() {
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
-         $("#leagues").append("<div class='resultsleague'>" + "<h4>League Name: " + matches[i].nameLeague + "</h4>" +
+         $("#leagues").append("<div class='resultsleague'>" + "<h3><span class='extra'>League Name: </span>" + matches[i].nameLeague + "</h3>" +
          "<div class='details'>" +
-         "<h5>Sport:</h5>" +  matches[i].sport +
-         "<br><h5>Skill Level:</h5>" + matches[i].skill +
-         "<br><h5>Cost:</h5>" + matches[i].cost +
-         "<br><h5>Location:</h5>" + matches[i].gameLocation +
-         "<br><h5>League Notes:</h5>" + matches[i].notes +
-         "<br><h5>League Website:</h5>" + matches[i].contact +
+         "<h5><span class='extra'>Sport: </span>" +  matches[i].sport + "</h5>" +
+         "<br><h5><span class='extra'>Skill Level: </span>" + matches[i].skill + "</h5>" +
+         "<br><h5><span class='extra'>Cost: </span>" + matches[i].cost + "</h5>" +
+         "<br><h5><span class='extra'>Location: </span>" + matches[i].gameLocation + "</h5>" +
+         "<br><h5><span class='extra'>League Notes: </span>" + matches[i].notes + "</h5>" +
+         "<br><h5><span class='extra'>League Website: </span>" + matches[i].contact + "</h5>" +
          "</div>" +
          "</div>");
        }
@@ -102,8 +102,8 @@ $(function() {
     /**reset the fields after submit**/
     resetFields();
     /**Toggle details**/
-    $("h4").click(function() {
-      $(".details").toggle("slow","swing");
+    $(".resultsleague").click(function() {
+      $(this).children(".details").toggle("slow");
     });
 
   });
