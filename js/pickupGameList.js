@@ -54,7 +54,8 @@ $(function() {
   /** when search by game name **/
   $("form#find-game-name").submit(function(event) {
     event.preventDefault();
-
+    /* clear the results */
+    $("#pickup-game-results").empty();
     var nameFilter = $("input#find-name").val();
 
     var matches = compareNames(pickupGames, nameFilter);
@@ -86,6 +87,9 @@ $(function() {
   /** when search by filters **/
   $("form#find-game").submit(function(event) {
     event.preventDefault();
+
+    /* clear the results */
+    $("#pickup-game-results").empty();
 
     var sportFilter = $("select.sport-type").val();
     var skillFilter = $("select.skill-level").val();

@@ -46,7 +46,8 @@ $(function() {
   /** when search by game name **/
   $("form#find-league-name").submit(function(event) {
     event.preventDefault();
-
+    /* clear the results */
+    $("#leagues").empty();
     var nameFilter = $("input#find-name").val();
 
     var matches = compareNames(leagues, nameFilter);
