@@ -61,15 +61,15 @@ $(function() {
 
     if(matches !== false) {
        $(".resultshow").show();
-       $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches.namePickupGame + "</h4>" +
+       $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4><span class='extra'>Pickup Game Name:  </span>" + matches.namePickupGame + "</h4>" +
        "<div class='details'>" +
-       "<h5>Sport:</h5>" +  matches.sport +
-       "<br><h5>Skill Level:</h5>" + matches.skill +
-       "<br><h5>Recurring Event?:</h5>" + matches.recurring +
-       "<br><h5>Location:</h5>" + matches.gameLocation +
-       "<br><h5>Date:</h5>" + matches.date +
-       "<br><h5>Event Notes:</h5>" + matches.notes +
-       "<br><h5>Coordinator Contact Info:</h5>" + matches.contact +
+       "<h5><span class='extra'>Sport: </span>" +  matches.sport + "</h5>" +
+       "<br><h5><span class='extra'>Skill Level: </span>" + matches.skill + "</h5>" +
+       "<br><h5><span class='extra'>Recurring Event?: </span>" + matches.recurring + "</h5>" +
+       "<br><h5><span class='extra'>Location: </span>" + matches.gameLocation + "</h5>" +
+       "<br><h5><span class='extra'>Date: </span>" + matches.date + "</h5>" +
+       "<br><h5><span class='extra'>Event Notes: </span>" + matches.notes + "</h5>" +
+       "<br><h5><span class='extra'>Coordinator Contact Info: </span>" + matches.contact + "</h5>" +
        "</div>" +
        "</div>");
     } else {
@@ -78,8 +78,8 @@ $(function() {
     /**reset fields**/
     resetFields();
     /**Toggle Details**/
-    $("h4").click(function() {
-      $(".details").toggle("slow","swing");
+    $(".resultspickup").click(function() {
+      $(this).children(".details").toggle("slow");
     });
   });
 
@@ -95,15 +95,15 @@ $(function() {
     if(matches[0] !== undefined) {
       for(var i = 0; i < matches.length; i++) {
          $(".resultshow").show();
-         $("#pickup-game-results").append("<div class='resultspickup'>" + "<h4>Pickup Game Name: " + matches[i].namePickupGame + "</h4>" +
+         $("#pickup-game-results").append("<div class='resultspickup'>" + "<h3><span class='extra'>Pickup Game Name:</span> " + matches[i].namePickupGame + "</h3>" +
          "<div class='details'>" +
-         "<h5>Sport:</h5>" +  matches[i].sport +
-         "<br><h5>Skill Level:</h5>" + matches[i].skill +
-         "<br><h5>Recurring Event?:</h5>" + matches[i].recurring +
-         "<br><h5>Location:</h5>" + matches[i].gameLocation +
-         "<br><h5>Date:</h5>" + matches[i].date +
-         "<br><h5>Event Notes:</h5>" + matches[i].notes +
-         "<br><h5>Coordinator Contact Info:</h5>" + matches[i].contact +
+         "<h5><span class='extra'>Sport:</span> " +  matches[i].sport + "</h5>" +
+         "<br><h5><span class='extra'>Skill Level: </span>" + matches[i].skill + "</h5>" +
+         "<br><h5><span class='extra'>Recurring Event?: </span>" + matches[i].recurring + "</h5>" +
+         "<br><h5><span class='extra'>Location: </span>" + matches[i].gameLocation + "</h5>" +
+         "<br><h5><span class='extra'>Date: </span>" + matches[i].date + "</h5>" +
+         "<br><h5><span class='extra'>Event Notes: </span>" + matches[i].notes + "</h5>" +
+         "<br><h5><span class='extra'>Coordinator Contact Info: </span>" + matches[i].contact + "</h5>" +
          "</div>" +
          "</div>");
        }
@@ -113,8 +113,8 @@ $(function() {
     /**reset fields after submit**/
     resetFields();
     /**Toggle Details**/
-    $("h4").click(function() {
-      $(".details").toggle("slow","swing");
+    $(".resultspickup").click(function() {
+      $(this).children(".details").toggle("slow");
     });
   });
 });
