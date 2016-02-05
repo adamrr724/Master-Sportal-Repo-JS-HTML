@@ -19,7 +19,7 @@ Similarly to “Find a League”, using interactive maps, users can search for p
 
 ## Known Bugs
 
-Map is currently just for show.  
+The number of objects to filter is limited. 
 
 ## Support and contact details
 
