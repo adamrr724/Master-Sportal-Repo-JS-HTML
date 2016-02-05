@@ -6,6 +6,8 @@ html {
 body {
   background-color:#d3d3d3;
   margin: 0 0 100px; /* bottom = footer height */
+  background-image: url(http://emdrtreinamento.com.br/wp-content/uploads/bg.jpg);
+  background-size: cover;
 }
 
 form select {
@@ -62,9 +64,8 @@ form input:focus {
   margin: -8px -8px -10px -10px;
 }
 
-.jumbotron {
-  background-image: url(http://emdrtreinamento.com.br/wp-content/uploads/bg.jpg);
-  background-size: cover;
+.front-logo {
+
   /*background-color: #d3d3d3;*/
   margin-top: -2em;
   margin-bottom: -2em;
@@ -73,7 +74,7 @@ form input:focus {
   text-align: center;
 }
 
-.jumbotron p img {
+.front-logo p img {
   padding-top: 1em;
   height: 13em;
   display: block;
@@ -81,7 +82,7 @@ form input:focus {
   margin-right: auto;
 }
 
-.jumbotron p {
+.front-logo p {
   text-align: center;
   text-shadow: #D3D3D3 0.05em 0.1em 0.5em;
   font-size: 28px;
